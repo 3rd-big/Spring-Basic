@@ -17,7 +17,9 @@ public class AppConfig {
      * @Bean memberService -> new MemoryREpository()
      * @Bean orderService -> new MemoryRepository()
      * 결과적으로 각각 다른 2개의 'MemoryMemberRepository' 가 생성되면서 싱글톤이 깨지는 것 처럼 보임
-     * 스프링 컨테이너는 어떻게 해결하는지?
+     * 스프링 컨테이너는 어떻게 해결하는지음?
+     *       -> @Configuration 으로 해결, ConfigurationSingletonTest 참고
+     *       -> @Bean 만 사용해도 스프링 빈으로 등록되지만, 싱글톤을 보장하지 않
      */
 
     /**
